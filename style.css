@@ -1,0 +1,100 @@
+td{
+  width:50px;
+  height:50px;
+  cursor:pointer;
+  position: relative;
+  display:inline-flex;
+  justify-content: center;
+  align-items: center;
+  border:1px solid black;
+}
+tr:nth-of-type(1) td{
+  border-top:0;
+}
+tr:nth-last-child(1) td{
+  border-bottom: 0;
+}
+td:nth-last-child(1){
+  border-right:0;
+}
+td:nth-of-type(1){
+  border-left:0;
+}
+table{
+  border-collapse: collapse
+}
+td.line{
+  background: red;
+}
+.cross-SVG{
+  stroke-dasharray: 1500;
+  stroke-dashoffset: 1500;
+  animation: dash 5s linear;
+  animation-fill-mode: forwards;
+}
+.cross-SVG_2{
+  animation-delay:0.3s;
+}
+.circle-SVG{
+  stroke-dasharray: 1500;
+  animation: dash 5s linear;
+  animation-fill-mode: forwards;
+}
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1500;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.template{
+  display:none;
+}
+/*@keyframes crossAnimation {
+  0%{
+    width:40px;
+  }
+  100%{
+    width:40px;
+  }
+}*/
+
+/*td.cross::after, td.cross::before{
+  content:'';
+  position: absolute;
+  animation-name: crossAnimation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  height:2px;
+  width:40px;
+  top:50%;
+  background: rgba(0,0,0,.54);
+}
+
+td.cross::after{
+  left:50%;
+  margin-left:-20px;
+  transform: rotate(45deg);
+}
+
+td.cross::before{
+  right:50%;
+  margin-right:-20px;
+  transform: rotate(-45deg);
+}*/
+
+/*td.circle::after{
+  content:'';
+  width:30px;
+  height:30px;
+  position: absolute;
+  border-radius: 100%;
+  top:50%;
+  margin-top:-16px;
+  border:2px solid rgba(0,0,0,.54);
+  background:transparent;
+  margin-left:-16px;
+  left:50%;
+}*/
